@@ -7,7 +7,7 @@ require("dotenv").config();
 
 module.exports = async (req, res, next) => {
   try {
-    //FIXME: 요구사항 바뀌는중 확정되면 수정필요.
+    //FIXME: 요구사항 바뀌는중 확정되면 수정필요..
     const { authorization } = req.headers;
 
     const [tokenType, tokenValue] = authorization.split(" ");
