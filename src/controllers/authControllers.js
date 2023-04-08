@@ -19,24 +19,23 @@ class AssetControllers {
   accToken = async (req, res, next) => {
     try {
       //TODO: 요구사항이 바뀌는중 .. 수정 대기중
-      const tokenq = req.cookies.token;
       const { token } = req.body;
       const decoded = jwt.decode(token);
       const resultacc = await getAsync(`${decoded.email}acc`);
       if (resultacc !== token)
-        return res.status(401).send({
+        return res.sendStatus(401).send({
           errorMessage: "The last issued token does not match.",
         });
 
       const result = await getAsync(`${decoded.email}ref`);
       if (result === null) {
-        return res.status(401).send({
+        return res.sendStatus(401).send({
           errorMessage: "The refresh token has expired. Please login again.",
         });
       } else {
         const refreshVerify = verify(result);
         if (refreshVerify === false) {
-          return res.status(401).send({
+          return res.sendStatus(401).send({
             errorMessage: "The refresh token has expired. Please login again.",
           });
         } else {
@@ -57,7 +56,7 @@ class AssetControllers {
           //   secure: true,
           //   sameSite: "none",
           // });
-          return res.status(200).send({
+          return res.sendStatus(200).send({
             token: token,
           });
         }
@@ -65,7 +64,7 @@ class AssetControllers {
     } catch (error) {
       logger.error(error.name);
       logger.error(error.message);
-      return res.status(401).send({
+      return res.sendStatus(401).send({
         errorname: error.name,
         message: error.message,
       });
