@@ -10,3 +10,10 @@ test.js
 config
 services
 app.js
+socket.js
+데이터초기설정모음.js
+public
+views
+카산드라 쿼리모음.js
+so.json
+swagger.js
