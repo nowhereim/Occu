@@ -6,8 +6,8 @@ class PassContorollers {
   }
   createPass = async (req, res) => {
     const val = req.body;
-    console.log(val);
-    res.status(201).send("good");
+    const result = await this.passServices.createPass(val);
+    res.status(201).send(result);
   };
 }
 

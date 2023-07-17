@@ -6,11 +6,15 @@ const LikeRouter = require("./likeRoutes");
 const ListRouter = require("./listRoutes");
 const PassRouter = require("./passRoutes");
 const ProfileRouter = require("./profileRoutes");
+const BlockRouter = require("./blockRoutes");
+const SocialRouter = require("./socialRoutes");
 router.use("/user", UserRouter);
 router.use("/authtoken", Authrouter);
 router.use("/like", LikeRouter);
 router.use("/list", ListRouter);
 router.use("/pass", PassRouter);
 router.use("/profile", ProfileRouter);
+router.use("/block", BlockRouter);
+router.use("/social", SocialRouter);
 
 module.exports = router;

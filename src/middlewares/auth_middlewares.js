@@ -1,7 +1,5 @@
 const jwt = require("jsonwebtoken");
 const logger = require("../../utils/logger");
-const redis = require("./../../utils/redis");
-const { User } = require("./../models");
 
 require("dotenv").config();
 
