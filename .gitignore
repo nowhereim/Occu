@@ -4,7 +4,6 @@ logs
 package.json
 package-lock.json
 labels.json
-models
 test.js
 .env
 config
