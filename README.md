@@ -8,3 +8,4 @@
 ![ezgif com-video-to-gif (2)](https://github.com/nowhereim/Occu/assets/113084907/25ba00e0-bfc0-4150-a68c-44378ca099d9)
 
 # 개발진행중
+ 
