@@ -1,4 +1,4 @@
-# alias: [Occu](https://occu.shop/) 
+
 
 ## How to use it
 
